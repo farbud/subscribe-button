@@ -24,6 +24,17 @@
 
         console.log(computerMove);
 
+        let result = ''
+
+        if (computerMove === 'Rock'){
+            result = 'Tie.'
+        }else if(computerMove === 'Papper'){
+            result = ' you lose.'
+        }else if (computerMove === 'Scisser'){
+            result = 'You win.'
+        };
+        
+        alert(`You picked .Computer picked ${computerMove}. ${result}`);
     ">Rock</button>
 
     <button>Papper</button>
