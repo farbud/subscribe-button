@@ -45,11 +45,9 @@
     </div>
     <script>
 
-        const score = {
-            wins: 0,
-            losses: 0,
-            ties: 0
-        };
+        const score =  JSON.parse(localStorage.getItem('score'))
+        
+
 
         function playGame(playerMove) {
             const computerMove = pickComputerMove();
@@ -89,6 +87,9 @@
             } else if (result === 'مساوی.') {
                 score.ties = score.ties + 1;
             }
+
+
+            localStorage.setItem('score',JSON.stringify(score));
 
 
             alert(`تو ${playerMove} برداشتی.من ${computerMove}. ${result}
